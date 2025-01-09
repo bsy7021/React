@@ -1,0 +1,179 @@
+.container{
+    border: 2px solid salmon;
+    margin: 100px auto;
+    width: 480px;
+    min-height: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    background-color: rgba(200, 200, 200, 0.1);
+}
+
+.header{
+    text-align: center;
+    font-size: 20px;
+    color: salmon;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    margin: 10px 10px 10px 0;
+}
+
+.input{
+    width: 80%;
+    height: 30px;
+    background-color: transparent;
+}
+
+.input::placeholder{
+    color: salmon;
+}
+
+.form .input{
+    margin: 0 10px;
+    border: none;
+    border-bottom: 1px solid salmon;
+    padding: 0 12px;
+    font-size: 18px;
+    outline: none;
+    color: salmon;
+}
+
+.form .btn{
+    width: 15%;
+}
+
+.btn{
+    width: 80px;
+    height: 40px;
+    padding: 0 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background-color: salmon;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: salmon;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.btn:active{ box-shadow: none; }
+
+.todoList{
+    height: 500px;
+    overflow-y: auto;
+}
+
+/* 스크롤바 */
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear,
+                     left bottom,
+                     left top,
+                     color-stop(0.44, rgb(255, 212, 212)),
+                     color-stop(0.72, rgb(255, 134, 134)),
+                     color-stop(0.86, rgb(255, 86, 86)));
+}
+
+ul{margin: 0;padding: 0;list-style-type: none;}
+
+.todoItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 10px 10px 0;
+    padding: 20px;
+    border: 2px solid salmon;
+    border-radius: 8px;
+    color: salmon;
+    font-size: 18px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.todoItem.active{
+    background-color: #333;
+    color: white;
+}
+
+.todoItem .item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.todoItem input[type='checkbox']{
+    display: none;
+}
+
+.todoItem label{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.todoItem input:checked ~ label {
+    background-color: #333;
+}
+
+.todoItem input:checked ~ span {
+    text-decoration: 2px line-through;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 10px 10px 0;
+}
+
+body{
+    background: linear-gradient(
+		-45deg,
+		#ffffff,
+		#ffe4e9,
+		#fcc8e2,
+		#f6baed,
+		#efb0ff,
+		#d3a2ff,
+		#8eb8ff,
+		#91efff,
+		#d5f9ff
+	);
+	background-size: 400% 400%;
+    animation: gradient 9s ease infinite;
+    /* height: 100vh; */
+}
+
+@keyframes gradient{
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
